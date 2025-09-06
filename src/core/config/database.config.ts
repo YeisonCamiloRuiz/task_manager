@@ -3,9 +3,9 @@ import { TypeOrmModuleOptions } from '@nestjs/typeorm';
 export const databaseConfig: TypeOrmModuleOptions = {
   type: 'mysql',
   host: 'localhost',
-  port: 3000,
+  port: 3306,
   username: 'root',
-  password: '',
+  password: '123456',
   database: 'task_manager_db',
   entities: [__dirname + '/**/*.entity{.ts,.js}'],
   synchronize: true,
