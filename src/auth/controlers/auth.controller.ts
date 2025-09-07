@@ -1,6 +1,6 @@
 import { Body, Controller, Post } from '@nestjs/common';
 import { AuthService } from '../services/auth.service';
-import { RefreshTokenDto, SignInDto } from '../dtos/sing-in/sign-in.dto';
+import { RefreshAccesTokenDto, RefreshTokenDto, SignInDto } from '../dtos/sing-in/sign-in.dto';
 import { SignUpDto } from '../dtos/sing-up/sing-up.dto';
 
 @Controller('auth')
@@ -18,9 +18,15 @@ export class AuthController {
 		return this.authService.singUp(body);
 	}
 
-	@Post('/refresh-token')
-	refreshAccesToken(@Body() body: RefreshTokenDto) {
+	@Post('/refresh-acces-token')
+	refreshAccesToken(@Body() body: RefreshAccesTokenDto) {
 		return this.authService.refreshAccesToken(body.refreshToken);
 	}
 
+	@Post('/refresh-token')
+	refreshTokens(@Body() body:RefreshAccesTokenDto){
+		return this.authService.refreshTokens(body.refreshToken)
+	}
+
+	
 }

@@ -9,7 +9,15 @@ export class SignInDto {
     password: string;
 }
 
+export class RefreshAccesTokenDto {
+    @IsString()
+    refreshToken: string;
+}
+
 export class RefreshTokenDto {
+    @IsString()
+    accesToken: string;
+
     @IsString()
     refreshToken: string;
 }

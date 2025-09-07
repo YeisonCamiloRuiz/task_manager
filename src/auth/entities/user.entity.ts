@@ -29,9 +29,12 @@ export class User {
     @UpdateDateColumn({ name: 'updated_at' })
     updatedAt: Date;
 
-    @Column({name:'access_token', nullable: true })
+    @Column({ name: 'access_token', nullable: true })
     accessToken:string;
 
-	@Column({name:'refresh_token', nullable: true })
+	@Column({ name: 'refresh_token', nullable: true })
     refreshToken:string;
+
+    @Column({ name: 'role_id', nullable:false, default:'d85d1754-da9d-4bbc-a846-daf413c9ca3d' })
+    roleId:string
 }
