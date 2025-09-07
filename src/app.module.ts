@@ -11,18 +11,18 @@ import { databaseConfig } from './core/config/database.config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
 @Module({
-  imports: [
-    ProjectsModule,
-    UserStorysModule,
-    TeamsModule,
-    UsersModule,
-    TasksModule,
-    ColumnsModule,
-    RolesPermissionsModule,
-    AuthModule,
-    TypeOrmModule.forRoot(databaseConfig),
-  ],
-  controllers: [],
-  providers: [],
+    imports: [
+        ProjectsModule,
+        UserStorysModule,
+        TeamsModule,
+        UsersModule,
+        TasksModule,
+        ColumnsModule,
+        RolesPermissionsModule,
+        AuthModule,
+        TypeOrmModule.forRoot(databaseConfig),
+    ],
+    controllers: [],
+    providers: [],
 })
 export class AppModule {}
