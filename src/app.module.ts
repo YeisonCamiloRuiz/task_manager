@@ -7,8 +7,8 @@ import { TasksModule } from './tasks/tasks.module';
 import { ColumnsModule } from './columns/columns.module';
 import { RolesPermissionsModule } from './roles-permissions/roles-permissions.module';
 import { AuthModule } from './auth/auth.module';
-import { TypeOrmModule } from '@nestjs/typeorm';
 import { databaseConfig } from './core/config/database.config';
+import { TypeOrmModule } from '@nestjs/typeorm';
 
 @Module({
   imports: [

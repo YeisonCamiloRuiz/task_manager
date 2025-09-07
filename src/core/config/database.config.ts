@@ -8,6 +8,7 @@ export const databaseConfig: TypeOrmModuleOptions = {
   password: '123456',
   database: 'task_manager_db',
   entities: [__dirname + '/**/*.entity{.ts,.js}'],
-  synchronize: true,
+  synchronize: false,
+  autoLoadEntities: true, // 👈 carga automática de entidades
   logging: true,
 };
